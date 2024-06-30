@@ -1,0 +1,40 @@
+{
+    "name": "@thinairthings/utilities",
+    "author": "Dan Lannan",
+    "version": "0.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "dev": "nodemon",
+        "build": "tsup-node",
+        "wipset": "changeset && changeset version && changeset publish --tag wip"
+    },
+    "types": "./dist/lib/index.d.ts",
+    "main": "./dist/lib/index.js",
+    "module": "./dist/lib/index.mjs",
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ThinAirThings/utilities.git"
+    },
+    "keywords": [],
+    "devDependencies": {
+        "nodemon": "^3.1.3",
+        "tsup": "^8.1.0",
+        "typescript": "^5.4.5",
+        "vite": "^5.3.1",
+        "vitest": "^1.6.0"
+    },
+    "dependencies": {}
+}
